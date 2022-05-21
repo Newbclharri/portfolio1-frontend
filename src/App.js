@@ -14,13 +14,13 @@ function App() {
   const URL = "https://cj-portfolio1-backend.herokuapp.com/";
   return (
     <div className="App">
-      <Header/>
+      <Header/>      
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/about" element={<About URL={`${URL}about`}/>} />
+          <Route path="/projects" element={<Projects URL={`${URL}projects`}/>} />
+        </Routes>
       <Footer/>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-      </Routes>
     </div>
   );
 }
