@@ -20,8 +20,8 @@ export default function Projects(props) {
                 return(
                     <div key={name}>
                         <h1>{name}</h1>
-                        <h3>Live Deployment: <a href={live} target="_blank"><button>Heroku</button></a></h3>
-                        <h3>Github: <a href={git} target="_blank"><button>Git Repo</button></a></h3>
+                        <h3>Live Deployment: <a href={live} target="_blank" rel="noreferrer"><button>Heroku</button></a></h3>
+                        <h3>Github: <a href={git} target="_blank" rel="noreferrer"><button>Git Repo</button></a></h3>
                         <h3>Screenshot: <img src={image} alt="project 1"/></h3>
 
                     </div>
