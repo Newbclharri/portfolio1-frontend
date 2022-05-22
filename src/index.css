@@ -15,3 +15,18 @@ code {
 span{
   font-weight: bold;
 }
+
+.bio-pic{
+  height: 300px;
+}
+
+header{
+  margin-bottom: 20px;
+}
+
+#bio{
+  text-align: left;
+  text-align: justify;
+  width: 50%;
+  margin: auto;
+}

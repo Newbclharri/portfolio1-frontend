@@ -19,9 +19,10 @@ export default function About(props) {
     //define a function that will return the JSX needed once we get the data
     const loaded = () => (
         <div>
+            <img className="bio-pic" src={about.headshot} alt="Calvin Harris"/>
             <h2>{about.name}</h2>
             <h3>Email: {about.email}</h3>
-            <p><span>Bio:</span> {about.bio}</p>
+            <p id="bio">{about.bio}</p>
         </div>
     );
 
