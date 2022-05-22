@@ -21,7 +21,7 @@ export default function About(props) {
         <div>
             <h2>{about.name}</h2>
             <h3>Email: {about.email}</h3>
-            <p><span>Bio</span>: {about.bio}</p>
+            <p><span>Bio:</span> {about.bio}</p>
         </div>
     );
 
