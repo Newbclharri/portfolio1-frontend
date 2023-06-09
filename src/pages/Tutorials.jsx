@@ -1,7 +1,7 @@
 import { useState, useEff, useEffect } from "react";
 
 export default function Tutorials(props) {
-    //set projects state variable
+    //set tutorials state variable
     const [tutorials, setTutorials] = useState(null);
     //create function to make api call
     const getTutorialsData = async () => {
@@ -27,5 +27,5 @@ export default function Tutorials(props) {
         
         })
     }
-    return projects ? loaded() : <h1>Loading...</h1>
+    return tutorials ? loaded() : <h1>Loading...</h1>
 }
