@@ -12,7 +12,8 @@ import Tutorials from './pages/Tutorials';
 
 function App() {
   //Heroku URL
-  const URL = "https://cj-portfolio1-backend.herokuapp.com/";
+  const URL = "https://thatsombracoder.onrender.com/";
+
   return (
     <div className="App">
       <Header/>      
