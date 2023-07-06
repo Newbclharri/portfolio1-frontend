@@ -10,16 +10,19 @@ export default function Header() {
         width: "90%",
         margin: "auto"
     }
+  
     return(
-        <header>
-            <h1>My Portfolio Page</h1>
-        <nav style={navStyle}>
-            <Link to="/">HOME</Link>
-            <Link to="/about">ABOUT</Link>
-            <Link to="/projects">PROJECTS</Link>
-            <Link to="/tutorials">TUTORIALS</Link>
-        </nav>
-        </header>        
+        <div>
+            <header>
+                <h1 className="Header">ThatShadowCoder</h1>
+                <nav style={navStyle}>
+                    <Link to="/">HOME</Link>
+                    <Link to="/about">ABOUT</Link>
+                    <Link to="/projects">PROJECTS</Link>
+                    <Link to="/tutorials">TUTORIALS</Link>
+                </nav>
+            </header> 
+        </div>       
     );
 }
 //
