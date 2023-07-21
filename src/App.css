@@ -8,7 +8,7 @@
 
 :root {
     --hover: greenyellow;
-    --page-color: linear-gradient(to right, gray, whitesmoke); 
+    --page-color: linear-gradient(to right, black, maroon); 
 }
 
 body{
@@ -43,7 +43,7 @@ form h1{
     padding: 40px;
 }
 
-.email-form{
+form{
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -59,7 +59,7 @@ form h1{
 .basic-info{
     height: 50px;
 }
-.email-info{    
+input, textarea{    
     align-content: center;
     margin-top: 40px;
     margin-left: 40px;
@@ -68,8 +68,7 @@ form h1{
     border-style: none;
     border-bottom-style: solid;    
     box-shadow: 1px 1px 3px 2px whitesmoke;
-    width: 80%;
-    
+    width: 80%;    
 }
 
 .text-area{
@@ -78,7 +77,7 @@ form h1{
     
     
 }
-.button{
+button{
     margin-top: 20px;
     margin-left: 40px;
     border-radius: 10px;
@@ -88,5 +87,6 @@ form h1{
     height: 20px;
     width: 20%;   
     padding: 20px auto; 
+    box-shadow: 1px 1px 3px 2px whitesmoke;
 }
 
