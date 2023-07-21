@@ -9,10 +9,12 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Tutorials from './pages/Tutorials';
+import Contact from './pages/Contact';
 
 function App() {
   //Heroku URL
-  const URL = "https://cj-portfolio1-backend.herokuapp.com/";
+  const URL = "https://thatsombracoder.onrender.com/";
+  const UrlPost = "http://localhost:7000/contact";
   return (
     <div className="App">
       <Header/>      
@@ -21,6 +23,7 @@ function App() {
           <Route path="/about" element={<About URL={URL} />} />
           <Route path="/projects" element={<Projects URL={URL} />} />
           <Route path="/tutorials" element={<Tutorials URL={URL} />} />
+          <Route path="/contact" element={<Contact UrlPost={UrlPost} />} />
         </Routes>
       <Footer/>
     </div>
