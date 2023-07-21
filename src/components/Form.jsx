@@ -29,7 +29,7 @@ export default function Form ({UrlPost}) {
     return(
         <div>
             <form className="email-form" onSubmit={handleSubmit}>
-                <h1>Contact Me</h1>
+                <h1>Contact <span style={{color: "red"}}>Me</span></h1>
                 <input type="text" name="name" placeholder="full name"  id="user-name" onChange={handleChange}/>
                 <input type="text" name="email" placeholder="email address" id="user-email" onChange={handleChange}/>
                 <input type="text" name="subject" placeholder="subject" id="subject-email" onChange={handleChange}/>

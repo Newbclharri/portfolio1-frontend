@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Overpass:wght@300&family=Ubuntu+Mono&display=swap");
+
 *{
     margin: 0;
     padding: 0;
@@ -9,25 +11,31 @@
 :root {
     --hover: greenyellow;
     --page-color: linear-gradient(to right, black, maroon); 
+    --font-main: "Overpass";
+    --font-title: "Black Ops One";
 }
 
 body{
     /* background-image: linear-gradient(to right, black, maroon); */
     background-image: var(--page-color);
     height: 100hv;
+    font-family: var(--font-main);
 }
 
 ::placeholder{
     /* background-color: transparent; */
+    font-family: var(--font-main);
+
 
 }
 .App{
     text-align: center;
 }
 
-.Header{
+Header, h1{
     
     text-shadow: -2px 2px var(--green);
+    font-family: var(--font-title);
 }
 a{
     color:white;
@@ -88,5 +96,6 @@ button{
     width: 20%;   
     padding: 20px auto; 
     box-shadow: 1px 1px 3px 2px whitesmoke;
+    font-family: var(--font-title);
 }
 
