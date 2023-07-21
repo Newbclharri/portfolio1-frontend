@@ -1,6 +1,13 @@
 import { useState, useEffect } from "react";
 
 export default function About(props) {
+    // const setColor = () =>{
+    //     document.body.style.setProperty("--page-color", "blue");
+    // }
+
+    // useEffect(()=>{
+    //     setColor();
+    // },[])
     //create state variable to hold about data
     const [about, setAbout] = useState(null);
     //create function to make api call

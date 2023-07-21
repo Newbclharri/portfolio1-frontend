@@ -1,16 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: solid red; */
+}
+
+
 :root {
-    --green: #bbd82a;
+    --hover: greenyellow;
+    --page-color: linear-gradient(to right, gray, whitesmoke); 
+}
+
+body{
+    /* background-image: linear-gradient(to right, black, maroon); */
+    background-image: var(--page-color);
+    height: 100hv;
+}
+
+::placeholder{
+    /* background-color: transparent; */
+
 }
 .App{
     text-align: center;
 }
 
 .Header{
+    
     text-shadow: -2px 2px var(--green);
 }
-
-a:hover {
-    color:var(--green);
-    font-weight: bold;
-    text-shadow: -2px 2px rgb(19, 19, 19);
+a{
+    color:white;
+    /* change back to yellow after test */
 }
+a:hover {
+    color:var(--hover);
+    /* font-weight: bold; */
+    /* text-shadow: -2px 2px maroon; */
+}
+
+form h1{
+    padding: 40px;
+}
+
+.email-form{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    /* justify-items: center; */
+    background-color: white;   
+    border-style: none;
+    width: 800px; 
+    max-height: 800px;  
+    padding-bottom: 20px;
+    
+}
+.basic-info{
+    height: 50px;
+}
+.email-info{    
+    align-content: center;
+    margin-top: 40px;
+    margin-left: 40px;
+    padding-left: 10px;
+    /* border-style: none; */
+    border-style: none;
+    border-bottom-style: solid;    
+    box-shadow: 1px 1px 3px 2px whitesmoke;
+    width: 80%;
+    
+}
+
+.text-area{
+    /* width: 60%; */
+    color: whitesmoke
+    
+    
+}
+.button{
+    margin-top: 20px;
+    margin-left: 40px;
+    border-radius: 10px;
+    border-style: hidden;
+    background-color:aquamarine;
+    font-weight: bold;
+    height: 20px;
+    width: 20%;   
+    padding: 20px auto; 
+}
+
