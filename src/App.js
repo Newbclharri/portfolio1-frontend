@@ -1,4 +1,5 @@
 import './App.css';
+import { useState } from 'react';
 //import components
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -14,13 +15,18 @@ import Contact from './pages/Contact';
 function App() {
   //Heroku URL
   const URL = "https://thatsombracoder.onrender.com/";
-  const UrlPost = "http://localhost:7000/contact";
+  const UrlPost = "http://localhost:5000/contact";
+  const [isActive, setActive] = useState(false);
+  const turnOn = ()=>{
+    setActive(true)
+  }
   return (
     <div className="App">
-      <Header/>      
+      <h1 className={isActive ? 'title-off': null}>ThatSombraCoder</h1>
+      <Header turnOn={turnOn} isActive={isActive} setActive={setActive}/>      
         <Routes>
           <Route path="/" element={<Home />}/>
-          <Route path="/about" element={<About URL={URL} />} />
+          <Route path="/about" element={<About URL={URL} setActive={setActive}/>} />
           <Route path="/projects" element={<Projects URL={URL} />} />
           <Route path="/tutorials" element={<Tutorials URL={URL} />} />
           <Route path="/contact" element={<Contact UrlPost={UrlPost} />} />

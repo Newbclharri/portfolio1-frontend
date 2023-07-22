@@ -1,3 +1,4 @@
+import { Link} from "react-router-dom";
 import { useState, useEffect } from "react";
 
 export default function About(props) {
@@ -15,14 +16,29 @@ export default function About(props) {
 
     //make an initial call for the data inside a useEFfect, so it only happens once on component load
     useEffect(() => {getAboutData()}, []);
+    const turnOn = ()=>{
+        props.setActive(true);
+    }
 
     //define a function that will return the JSX needed once we get the data
     const loaded = () => (
         <div>
-            <img className="bio-pic" src={about.headshot} alt="Calvin Harris"/>
-            <h2>{about.name}</h2>
-            <h3>Email: {about.email}</h3>
-            <p id="bio">{about.bio}</p>
+            <br/>
+            <h3 id="business-card">*Business Card*</h3>
+            <div className="flip-card">
+                <div className="flip-card-inner">
+                    <div className="flip-card-front">
+                        <img src={about.headshot} alt="headshot" style={{width: "85px", height:"300px"}} />
+                    </div>
+                    <div className="flip-card-back">
+                        <h2 className="highlight">ThatShadowCoder</h2><br/>
+                        <p><span style={{textDecoration: "underline", fontFamily: "Black Ops One"}}>Full Stack Engineer</span></p><br/>
+                        <p>Lover of Life</p><br/>
+                        <p>Lover of Learning</p><br/>
+                        <Link to="/contact" className="flip-card-link" onClick={turnOn}>CONTACT</Link>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 

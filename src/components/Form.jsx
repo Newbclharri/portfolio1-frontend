@@ -14,22 +14,24 @@ export default function Form ({UrlPost}) {
     }
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setData({name: "", email: "", subject: "", message: ""})
         console.log(UrlPost); //add NodemailerUser server code to production server site @ render.com and user URL in APP.js
-        const request = await fetch(UrlPost, {
+        await fetch(UrlPost, {
             method: "post",
             headers: {
                 Accept: "application/json",
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(data)
-        })
+        }).then(()=>{this.setData({name: "", email: "", subject: "", message: ""})})        
 
     }
+
 
     return(
         <div>
             <form className="email-form" onSubmit={handleSubmit}>
-                <h1>Contact <span style={{color: "red"}}>Me</span></h1>
+                <h1 style={{color: "black"}}>Contact <span className="highlight">ThatSombraCoder</span></h1>
                 <input type="text" name="name" placeholder="full name"  id="user-name" onChange={handleChange}/>
                 <input type="text" name="email" placeholder="email address" id="user-email" onChange={handleChange}/>
                 <input type="text" name="subject" placeholder="subject" id="subject-email" onChange={handleChange}/>

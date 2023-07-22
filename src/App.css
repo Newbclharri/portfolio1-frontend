@@ -20,6 +20,7 @@ body{
     background-image: var(--page-color);
     height: 100hv;
     font-family: var(--font-main);
+    color: white
 }
 
 ::placeholder{
@@ -31,11 +32,25 @@ body{
 .App{
     text-align: center;
 }
+.title-off{
+    color: transparent;
+    text-shadow: none;
+}
 
-Header, h1{
+.highlight {
+    color: maroon;
+}
+/* Just the h1 element in the header */
+header h1{
+    text-shadow: -2px 2px black;
+    color: whitesmoke
+}
+
+/*ALL headers and ALL h1 elements*/
+header, h1, h2{
     
-    text-shadow: -2px 2px var(--green);
     font-family: var(--font-title);
+    
 }
 a{
     color:white;
@@ -45,6 +60,66 @@ a:hover {
     color:var(--hover);
     /* font-weight: bold; */
     /* text-shadow: -2px 2px maroon; */
+}
+
+.flip-card-link{
+    color: black;
+    text-decoration: none;
+    font-family: var(--font-title);
+}
+.flip-card-link:hover {
+    text-decoration: underline;
+    color: aquamarine;
+    text-shadow: -2px 2px black;
+}
+
+.flip-card {
+    margin: 0px auto;
+    background-color: transparent;
+    width: 600px;
+    height: 350px;
+    /* border: 1px solid blue; */
+    perspective: 1000px; /*3D effect */
+ 
+}
+
+/*Position front and back side of flip-card*/
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/*horizontal flip on mouse over flip-card container*/
+.flip-card:hover .flip-card-inner {
+   transform: rotateY(180deg);
+}
+
+/*Position front and back side*/
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /*Safari*/
+    backface-visibility: hidden;
+    box-shadow: 1px 1px 3px 2px whitesmoke;
+}
+
+.flip-card-front {
+    padding-top: 25px;
+    background-color: white;
+}
+
+.flip-card-back {
+    background-color: white;
+    color: black;
+    transform: rotateY(180deg);
+    padding-top: 50px;
+   
+   
 }
 
 form h1{
@@ -85,10 +160,25 @@ input, textarea{
     
     
 }
-button{
+button {
     margin-top: 20px;
     margin-left: 40px;
     border-radius: 10px;
+    border-style: hidden;
+    background-color:aquamarine;
+    font-weight: bold;
+    height: 20px;
+    width: fit-content;   
+    padding: 10px auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 1px 1px 3px 2px whitesmoke;
+    font-family: var(--font-title);
+}
+
+#business-card {
+    margin: 0 auto;
+    margin-bottom: 10px;
     border-style: hidden;
     background-color:aquamarine;
     font-weight: bold;
@@ -97,5 +187,6 @@ button{
     padding: 20px auto; 
     box-shadow: 1px 1px 3px 2px whitesmoke;
     font-family: var(--font-title);
+    color: black;
 }
 
