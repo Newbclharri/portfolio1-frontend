@@ -40,8 +40,35 @@ body{
 .title-off{
     color: transparent;
     text-shadow: none;
+    opacity: 0;
+    transition: opacity 2s linear;
+}
+.container{
+    /* margin: 0px auto; */
+}
+#container-home{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    border: 2px solid whitesmoke;
+    margin: 0px auto;
+    width: 70%;
+    gap: 75px;
+
+    text-align: center;
 }
 
+#container-home img{
+    border: 2px solid white
+}
+#container-home h1{
+    text-align: center;
+    /* width: 110%; */
+    border: 2px solid white;
+}
+.column-home{
+    
+}
 .highlight {
     color: maroon;
 }
@@ -130,6 +157,7 @@ a:hover {
 
 form h1{
     padding: 40px;
+    margin-top: -110px;
 }
 
 form{
