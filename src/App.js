@@ -3,6 +3,7 @@ import { useState } from 'react';
 //import components
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Aside from './components/Aside';
 //import Routes, Route components from react-router-dom
 import { Routes, Route } from 'react-router-dom';
 //import pages
@@ -23,7 +24,8 @@ function App() {
   return (
     <div className="App">
       <h1 className={isActive ? 'title-off': null}>ThatSombraCoder</h1>
-      <Header turnOn={turnOn} isActive={isActive} setActive={setActive}/>      
+      <Header turnOn={turnOn} isActive={isActive} setActive={setActive}/> 
+      <Aside/>     
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/about" element={<About URL={URL} setActive={setActive}/>} />
