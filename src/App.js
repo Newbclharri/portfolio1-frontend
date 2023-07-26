@@ -19,16 +19,21 @@ function App() {
   const UrlPost = "http://localhost:5000/contact";
   const [isActive, setActive] = useState(false);
   const turnOn = ()=>{
-    setActive(true)
+    setActive(false);
   }
+  
+  const turnOff = ()=>{
+    setActive(true);
+  }
+
   return (
     <div className="App">
-      <h1 className={isActive ? 'title-off': null}>ThatSombraCoder</h1>
-      <Header turnOn={turnOn} isActive={isActive} setActive={setActive}/> 
-      <Aside/>     
+      <div className="title"> <h1 className={isActive ? 'title-off': null}>ThatSombraCoder</h1> </div>
+      <Header/> 
+      <Aside turnOn={turnOn} turnOff={turnOff}/>     
         <Routes>
           <Route path="/" element={<Home />}/>
-          <Route path="/about" element={<About URL={URL} setActive={setActive}/>} />
+          <Route path="/about" element={<About URL={URL} turnOff={turnOff}/>} />
           <Route path="/projects" element={<Projects URL={URL} />} />
           <Route path="/tutorials" element={<Tutorials URL={URL} />} />
           <Route path="/contact" element={<Contact UrlPost={UrlPost} />} />

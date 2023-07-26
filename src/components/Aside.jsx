@@ -2,17 +2,18 @@ import React from "react";
 import "../App.css";
 import { Link } from "react-router-dom";
 
-const Aside = ()=> {
+const Aside = ({turnOn,turnOff, setActive})=> {
 
     return(
         <div id="Aside">
             <div>
-                <h1>Aside</h1>
-                <Link to="/">HOME</Link>
-                <Link to="/about">ABOUT</Link>
-                <Link to="/projects">PROJECTS</Link>
-                <Link to="/tutorials">TUTORIALS</Link>
-                <Link to="/contact">CONTACT</Link>
+                <nav id="aside-container">
+                    <Link to="/" onClick={turnOn}>HOME</Link>
+                    <Link to="/about" onClick={turnOn}>ABOUT</Link>
+                    <Link to="/projects" onClick={turnOn}>PROJECTS</Link>
+                    <Link to="/tutorials" onClick={turnOn}>TUTORIALS</Link>
+                    <Link to="/contact" onClick={turnOff}>CONTACT</Link>
+                </nav>
             </div>
         </div>
     )

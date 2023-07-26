@@ -16,9 +16,6 @@ export default function About(props) {
 
     //make an initial call for the data inside a useEFfect, so it only happens once on component load
     useEffect(() => {getAboutData()}, []);
-    const turnOn = ()=>{
-        props.setActive(true);
-    }
 
     //define a function that will return the JSX needed once we get the data
     const loaded = () => (
@@ -35,7 +32,7 @@ export default function About(props) {
                         <p><span style={{textDecoration: "underline", fontFamily: "Black Ops One"}}>Full Stack Engineer</span></p><br/>
                         <p>Lover of Life</p><br/>
                         <p>Lover of Learning</p><br/>
-                        <Link to="/contact" className="flip-card-link" onClick={turnOn}>CONTACT</Link>
+                        <Link to="/contact" className="flip-card-link" onClick={props.turnOff}>CONTACT</Link>
                     </div>
                 </div>
             </div>
