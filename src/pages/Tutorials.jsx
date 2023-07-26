@@ -22,10 +22,7 @@ export default function Tutorials(props) {
                 <div key={title}>
                     <h1 style={{color: "whitesmoke"}}>{title}</h1>
                     <YoutubeEmbed embedId = {id}/>
-                    <div style={{
-                        backgroundColor:" #333333", width:"80%", height:"10px", margin:"0 auto", marginTop:"20px", borderRadius:"10px"
-                        }}>
-                    </div>
+                    <hr style={{width: "873px", margin: "0px auto"}}/>
                 </div>
             )
         
