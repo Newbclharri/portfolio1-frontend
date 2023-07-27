@@ -95,8 +95,7 @@ header, h1, h2{
     flex-direction: column;
     gap: 80px;
 }
-nav a{
-    
+nav a{    
     color:white;
     border: 1px solid rgb(27, 27, 27);
     text-align: right;
@@ -104,6 +103,7 @@ nav a{
     text-decoration: none;
     font-family: var(--font-title);
 }
+
 a:hover {
     color:var(--hover);
     transform: scale(1.5)
@@ -113,10 +113,11 @@ a:hover {
 
 .flip-card a{
     display: flex;
+    width: fit-content;
     color: black;
     text-decoration: none;
     font-family: var(--font-title);
-    justify-content: center;
+    margin: 0 auto;
 }
 .flip-card a:hover {
     /* text-decoration: underline; */
