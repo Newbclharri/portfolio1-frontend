@@ -26,8 +26,8 @@ body{
 ::placeholder{
     /* background-color: transparent; */
     font-family: var(--font-main);
-
-
+    
+    
 }
 .App{
     text-align: center;
@@ -43,19 +43,14 @@ body{
     opacity: 0;
     transition: opacity 2s linear;
 }
-.container{
-    /* margin: 0px auto; */
-}
+
 #container-home{
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     border: 2px solid whitesmoke;
     margin: 0px auto;
     width: 70%;
     gap: 75px;
-
-    text-align: center;
 }
 
 #container-home img{
@@ -66,9 +61,10 @@ body{
     /* width: 110%; */
     border: 2px solid white;
 }
-.column-home{
-    
+#container-home span{
+    font-style: italic;
 }
+
 .highlight {
     color: maroon;
 }
@@ -84,26 +80,49 @@ header, h1, h2{
     font-family: var(--font-title);
     
 }
-a{
+
+#Aside{
+    position: fixed;
+    /* border: 1px solid white; */
+    margin-top: 10px;    
+    margin-left: 0px;
+    width: 200px;
+    height: 100vh;    
+}
+
+#Aside nav{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+nav a{
+    
     color:white;
-    /* change back to yellow after test */
+    border: 1px solid rgb(27, 27, 27);
+    text-align: right;
+    margin-left: 20px;
+    text-decoration: none;
     font-family: var(--font-title);
 }
 a:hover {
     color:var(--hover);
+    transform: scale(1.5)
     /* font-weight: bold; */
     /* text-shadow: -2px 2px maroon; */
 }
 
-.flip-card-link{
+.flip-card a{
+    display: flex;
     color: black;
     text-decoration: none;
     font-family: var(--font-title);
+    justify-content: center;
 }
-.flip-card-link:hover {
-    text-decoration: underline;
-    color: aquamarine;
+.flip-card a:hover {
+    /* text-decoration: underline; */
+    color: var(--hover);
     text-shadow: -2px 2px black;
+    transform: 1.2;
 }
 
 .flip-card {
@@ -142,16 +161,16 @@ a:hover {
 }
 
 .flip-card-front {
-    padding-top: 25px;
     background-color: white;
 }
 
 .flip-card-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: white;
     color: black;
-    transform: rotateY(180deg);
-    padding-top: 50px;
-   
+    transform: rotateY(180deg);   
    
 }
 
@@ -224,30 +243,3 @@ button {
     color: black;
 }
 
-#Aside{
-    position: fixed;
-    /* border: 1px solid white; */
-    margin-top: 10px;    
-    margin-left: 0px;
-    width: 200px;
-    height: 100vh;
-    
-}
-
-#Aside nav {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
-}
-
-nav a{
-    border: 1px solid rgb(27, 27, 27);
-    text-align: right;
-    margin-left: 20px;
-    text-decoration: none;
-}
-
-nav a:hover {
-    transform: scale(1.5)
-}
