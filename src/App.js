@@ -17,7 +17,7 @@ import Contact from './pages/Contact';
 function App() {
   //Heroku URL
   const URL = "https://thatsombracoder.onrender.com/";
-  const UrlPost = "https://thatsombracoder.onrender.com/contact";
+  const UrlPost = "http://localhost:5000/contact";
   const [isActive, setActive] = useState(false);
   const [modal, setModal] = useState(false);
   const toggleModal = ()=>{
@@ -41,7 +41,7 @@ function App() {
           <Route path="/about" element={<About URL={URL} toggleModal={toggleModal} modal={modal} turnOff={turnOff}/>} />
           <Route path="/projects" element={<Projects URL={URL} />} />
           <Route path="/tutorials" element={<Tutorials URL={URL} />} />
-          <Route path="/contact" element={<Contact UrlPost={UrlPost} />} />
+          <Route path="/contact" element={<Contact UrlPost={UrlPost} URL={URL} />} />
         </Routes>
       <Footer/>
     </div>

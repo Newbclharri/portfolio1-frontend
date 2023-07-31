@@ -1,10 +1,10 @@
 import React from "react";
 import Form from "../components/Form";
 
-export default function Contact ({UrlPost}) {
+export default function Contact ({UrlPost, URL}) {
     return(
         <div>
-            <Form UrlPost={UrlPost}/>
+            <Form UrlPost={UrlPost} URL={URL}/>
         </div>
     )
 }
