@@ -1,5 +1,6 @@
 import { Link} from "react-router-dom";
 import { useState, useEffect } from "react";
+import Modal from "../components/Modal";
 
 export default function About(props) {
     //create state variable to hold about data
@@ -35,12 +36,14 @@ export default function About(props) {
                             <p><span style={{textDecoration: "underline", fontFamily: "Black Ops One"}}>Full Stack Engineer</span></p><br/>
                             <p>Lover of Life</p><br/>
                             <p>Lover of Learning</p><br/>
+                            <p>Lover of All Things <button onClick={props.toggleModal}>SkyCotl</button></p><br/>
                             <a href="https://www.youtube.com/channel/UClXA3La1YE-vEODjPhdyiug" target="_blank" rel="noopener noreferrer"><img src="./youtube.png" alt="YouTube-icon" style={{width:"60px"}}/></a><br/>
                             <Link to="/contact" onClick={props.turnOff}>CONTACT</Link>                            
                         </div>
                     </div>
                 </div>
             </div>
+            <Modal modal={props.modal} toggleModal={props.toggleModal}/>
         </div>
     );
 

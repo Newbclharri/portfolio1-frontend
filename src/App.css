@@ -47,19 +47,19 @@ body{
 #container-home{
     display: flex;
     justify-content: center;
-    border: 2px solid whitesmoke;
+    /* border: 2px solid whitesmoke; */
     margin: 0px auto;
-    width: 70%;
-    gap: 75px;
+    width: 70%; /*75*/
+    gap: 0px; /*70px must optimize for smaller screen ratios*/
 }
 
 #container-home img{
-    border: 2px solid white
+    /* border: 2px solid white */
 }
 #container-home h1{
     text-align: center;
     /* width: 110%; */
-    border: 2px solid white;
+    /* border: 2px solid white; */
 }
 #container-home span{
     font-style: italic;
@@ -98,6 +98,7 @@ header, h1, h2{
 nav a{    
     color:white;
     border: 1px solid rgb(27, 27, 27);
+    width: 75%;
     text-align: right;
     margin-left: 20px;
     text-decoration: none;
@@ -214,7 +215,7 @@ input, textarea{
     
     
 }
-button {
+.button-main {
     margin-top: 20px;
     margin-left: 40px;
     border-radius: 10px;
@@ -244,3 +245,18 @@ button {
     color: black;
 }
 
+.modal-video{
+    /* display: flex;
+    flex-direction: column; */
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+#button-close{
+    width: 20px;
+    height: 25px;
+    font-weight: bold;
+    position: relative;
+    left: 35px;
+}

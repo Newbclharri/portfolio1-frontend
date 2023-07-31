@@ -37,7 +37,7 @@ export default function Form ({UrlPost}) {
                 <input type="text" name="email" placeholder="email address" id="user-email" onChange={handleChange}/>
                 <input type="text" name="subject" placeholder="subject" id="subject-email" onChange={handleChange}/>
                 <textarea name="message" placeholder="message here" id="message-email" cols="30" rows="10" onChange={handleChange}/>
-                <button type="submit">Send Message</button>
+                <button className="button-main" type="submit">Send Message</button>
             </form>
         </div>
     )

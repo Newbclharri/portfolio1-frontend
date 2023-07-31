@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Aside from './components/Aside';
+import Modal from './components/Modal';
 //import Routes, Route components from react-router-dom
 import { Routes, Route } from 'react-router-dom';
 //import pages
@@ -18,6 +19,10 @@ function App() {
   const URL = "https://thatsombracoder.onrender.com/";
   const UrlPost = "https://thatsombracoder.onrender.com/contact";
   const [isActive, setActive] = useState(false);
+  const [modal, setModal] = useState(false);
+  const toggleModal = ()=>{
+    setModal((prev)=>!prev)
+  }
   const turnOn = ()=>{
     setActive(false);
   }
@@ -33,7 +38,7 @@ function App() {
       <Aside turnOn={turnOn} turnOff={turnOff}/>     
         <Routes>
           <Route path="/" element={<Home />}/>
-          <Route path="/about" element={<About URL={URL} turnOff={turnOff}/>} />
+          <Route path="/about" element={<About URL={URL} toggleModal={toggleModal} modal={modal} turnOff={turnOff}/>} />
           <Route path="/projects" element={<Projects URL={URL} />} />
           <Route path="/tutorials" element={<Tutorials URL={URL} />} />
           <Route path="/contact" element={<Contact UrlPost={UrlPost} />} />

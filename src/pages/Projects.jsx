@@ -21,11 +21,11 @@ export default function Projects(props) {
                     <div>
                         <div className="projects" key={name}>
                             <h1>{name}</h1>
-                            <h3>Live Deployment: <a href={live} target="_blank" rel="noreferrer" id="project-links"><button>Render</button></a></h3>
-                            <h3>Github: <a href={git} target="_blank" rel="noreferrer"><button>Repo</button></a></h3> <br/>
-                            <h3>Screenshot:</h3> <img src={image} alt="project 1" style={{width:"1200px"}}/>
+                            <h3>Live Deployment: <a href={live} target="_blank" rel="noreferrer" id="project-links"><button className="main">Render</button></a></h3>
+                            <h3>Github: <a href={git} target="_blank" rel="noreferrer"><button className="main">Repo</button></a></h3> <br/>
+                            <h3>Screenshot:</h3> <img src={image} alt="project 1" style={{width:"700px"}}/>
                         </div>
-                        <hr style={{width: "1220px", margin: "0px auto"}}/>
+                        <hr style={{width: "720px", margin: "0px auto"}}/>
                         <br/>
                     </div>
                     
