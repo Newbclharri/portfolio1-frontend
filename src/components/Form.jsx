@@ -15,20 +15,25 @@ export default function Form ({UrlPost, URL}) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         console.log(URL+"contact"); //add NodemailerUser server code to production server site @ render.com and user URL in APP.js
-        await fetch(URL + "contact", {
-            method: "post",
-            headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        });
-        alert("Message Sent Sucessfully!")
-        setData({name: "", email:"", subject: "", message: ""})  
+        try{
+            await fetch(URL + "contact", {
+                method: "post9",
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            });
+            await alert("Message Sent");
+            //.then(()=>alert("Message Sent")) //callback needed so alert fxn won't execute immediately. This is shorthand notation for ()=>{return alert("message")}
+        }catch(err){
+            alert("Error!")
+        }finally{
+            setData({name: "", email:"", subject: "", message: ""})              
+        }
 
     }
-
-
+    //returning jsx from Form component
     return(
         <div>
             <form className="email-form" onSubmit={handleSubmit}>
@@ -38,7 +43,7 @@ export default function Form ({UrlPost, URL}) {
                 <input type="text" name="email" placeholder="email address" value={data.email} id="user-email" onChange={handleChange}/>
                 <input type="text" name="subject" placeholder="subject" value={data.subject} id="subject-email" onChange={handleChange}/>
                 <textarea name="message" placeholder="message here" value={data.message} id="message-email" cols="30" rows="10" onChange={handleChange}/>
-                <button className="button-main" type="submit">Send Message</button>
+                <button className="button-main" type="submit" style={{fontSize:"15px"}}>Send Message</button>
             </form>
         </div>
     )
