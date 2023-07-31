@@ -32,13 +32,27 @@ export default function About(props) {
                     <div className="flip-card-back">
                         <img src={about.headshot} alt="headshot" style={{width: "85px", height:"300px", border: "2px solid black"}}/>
                         <div style={{width: "50%"}}>
-                            <h2 className="highlight">ThatShadowCoder</h2><br/>
-                            <p><span style={{textDecoration: "underline", fontFamily: "Black Ops One"}}>Full Stack Engineer</span></p><br/>
-                            <p>Lover of Life</p><br/>
-                            <p>Lover of Learning</p><br/>
-                            <p>Lover of All Things <button onClick={props.toggleModal}>SkyCotl</button></p><br/>
-                            <a href="https://www.youtube.com/channel/UClXA3La1YE-vEODjPhdyiug" target="_blank" rel="noopener noreferrer"><img src="./youtube.png" alt="YouTube-icon" style={{width:"60px"}}/></a><br/>
-                            <Link to="/contact" onClick={props.turnOff}>CONTACT</Link>                            
+                            <h2 className="highlight">ThatShadowCoder</h2> <br/>                           
+                            <p>
+                                <span style={{textDecoration: "underline", fontFamily: "Black Ops One"}}>Full Stack Engineer</span> 
+                            </p>
+                            <p style={{marginLeft: "-100px"}}>Lover of ...</p>                                                          
+                            <ul style={{margin: "0px auto", width:"fit-content"}}>
+                                <li>Life</li>
+                                <li>Learning</li>
+                                <li>Lambdas</li>
+                                <li>and All Things <img id="img-sky" src={"../sky-black.png"} onClick={props.toggleModal}/></li>
+                            </ul>                            
+                            <a 
+                                href="https://www.youtube.com/channel/UClXA3La1YE-vEODjPhdyiug" 
+                                target="_blank" rel="noopener noreferrer">
+                                <img 
+                                    src="./youtube.png" 
+                                    alt="YouTube-icon" 
+                                    style={{width:"75px"}}
+                                />
+                            </a> <br/>
+                            <Link to="/contact" onClick={props.turnOff} style={{marginTop: "2px"}}>CONTACT</Link>                            
                         </div>
                     </div>
                 </div>

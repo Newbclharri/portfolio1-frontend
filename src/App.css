@@ -107,9 +107,22 @@ nav a{
 
 a:hover {
     color:var(--hover);
-    transform: scale(1.5)
+    transform: scale(1.5);
     /* font-weight: bold; */
     /* text-shadow: -2px 2px maroon; */
+}
+#img-sky:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+#img-sky{
+    background-color: black;
+    height: 50px;
+    position: absolute;
+    top: 165px;
+    margin-left: 5px;
+    border-radius: 5px;
 }
 
 .flip-card a{
@@ -133,7 +146,7 @@ a:hover {
     width: 600px;
     height: 350px;
     /* border: 1px solid blue; */
-    perspective: 1000px; /*3D effect */
+    perspective: 2000px; /*3D effect */
  
 }
 
@@ -169,7 +182,7 @@ a:hover {
 .flip-card-back {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:center;
     background-color: white;
     color: black;
     transform: rotateY(180deg);   
@@ -259,4 +272,9 @@ input, textarea{
     font-weight: bold;
     position: relative;
     left: 35px;
+}
+
+
+li{
+    text-align: start;
 }
