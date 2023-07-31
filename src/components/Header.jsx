@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import React, {useState, useEffect, useRef, CSSProperties} from "react";
 
-
 export default function Header({turnOn, isActive, setActive}) {
     // const navStyle = {
     //     display: "flex",
@@ -20,8 +19,7 @@ export default function Header({turnOn, isActive, setActive}) {
     //     document.documentElement.style.setProperty('--hover', "greenyellow")
     //     myHeader.current.style.textShadow = "-2px 2px white"
 
-    // },[])
- 
+    // },[]) 
 
     return(
         <header>
