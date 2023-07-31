@@ -238,11 +238,8 @@ input, textarea{
     border-style: hidden;
     background-color:aquamarine;
     font-weight: bold;
-    height: 20px;
-    width: fit-content;   
-    padding: 10px auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    /* height: 20px; */
+    width: 70px;
     box-shadow: 1px 1px 3px 2px whitesmoke;
     font-family: var(--font-title);
 }
