@@ -16,14 +16,17 @@ export default function Projects(props) {
 
     const loaded = () =>{
         //if data received render with JSX
-        return projects.map(({name, live, git, image}) =>{
+        return projects.map(({name, live, repo, image}) =>{
                 return(
-                    <div key={name}>
-                        <h1>{name}</h1>
-                        <h3>Live Deployment: <a href={live} target="_blank" rel="noreferrer"><button>Heroku</button></a></h3>
-                        <h3>Github: <a href={git} target="_blank" rel="noreferrer"><button>Git Repo</button></a></h3>
-                        <h3>Screenshot: <img src={image} alt="project 1"/></h3>
-
+                    <div id="projects-container">
+                        <div className="projects" key={name}>
+                            <h1>{name}</h1>
+                            <h3>Live Deployment: <a href={live} target="_blank" rel="noreferrer" id="project-links"><button className="button-main">Render</button></a></h3>
+                            <h3>Code: <a href={repo} target="_blank" rel="noreferrer"><button className="button-main">Repo</button></a></h3> <br/>
+                            <h3>Screenshot:</h3> <img src={image} alt="project 1" style={{width:"700px"}}/>
+                        </div>
+                        <hr style={{width: "720px", margin: "0px auto"}}/>
+                        <br/>
                     </div>
                     
                 )

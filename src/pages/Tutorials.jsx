@@ -1,4 +1,4 @@
-import { useState, useEff, useEffect } from "react";
+import { useState, useEffect } from "react";
 import YoutubeEmbed from "../components/YoutubeEmbed";
 
 export default function Tutorials(props) {
@@ -19,19 +19,14 @@ export default function Tutorials(props) {
         //if data received, render with JSX
         return tutorials.map(({title, url, id})=>{
             return(
-                <div key={title}>
-                    <h1>{title}</h1>
+
+                <div id="tutorials-container" key={title}>
+                    <h1 style={{width:"70%", margin: "0px auto", whiteSpace: "pre-line"}}>{title}</h1>
                     <YoutubeEmbed embedId = {id}/>
-                    <div style={{
-                        backgroundColor:"gray", width:"80%", height:"10px", margin:"0 auto", marginTop:"20px", borderRadius:"10px"
-                        }}>
-                    </div>
+                    <hr style={{width: "773px", margin: "0px auto"}}/><br/> {/**873 */}
                 </div>
-            )
-        
-        })
-       
-    }
- 
+            )        
+        })       
+    } 
     return tutorials ? loaded() : <h1>Loading...</h1>
 }
