@@ -20,7 +20,7 @@ body{
     background-image: var(--page-color);
     height: 100hv;
     font-family: var(--font-main);
-    color: white
+    color: white;
 }
 
 ::placeholder{
@@ -32,9 +32,18 @@ body{
 }
 
 .title {
+    display: flex;
     border: 2px solid rgba(0, 0, 0, 0.995);
     background-color: rgba(11, 11, 11, 0.754);
+    justify-content: center; /*x-axis property*/
 }
+
+/* .title h1{
+    width: 30%;
+    border: 2px solid red;
+    text-align: center;
+    margin: 0 auto;
+} */
 .title-off{
     color: transparent;
     text-shadow: none;
@@ -44,16 +53,17 @@ body{
 
 #container-home{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     /* border: 2px solid whitesmoke; */
     margin: 50px auto;
     width: 70%; /*75*/
     gap: 0px; /*70px must optimize for smaller screen ratios*/
 }
 
+
 #container-home p{
     font-size: large;
-    /* width: 125%; */
+    /* width: 50vw; */
 }
 
 #container-home h1{
@@ -65,17 +75,32 @@ body{
     font-style: italic;
 }
 
-.column-home {
+.home-img{
+    background-image: url("../public/logo1.png");
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.home-col-1, .home-col-3{
     margin: 50px auto;
 }
-
-.home-col-right p{
-    width: 120%;
+.home-col-1, .home-col-2,.home-col-3{
+    /* width: min-content; */
 }
+
+/* .home-col-3 p{
+    width: 120%;
+} */
+
+
+
 
 .highlight {
     color: maroon;
 }
+
+
 /* Just the h1 element in the header */
 header h1{
     text-shadow: -2px 2px black;
@@ -94,7 +119,7 @@ header, h1, h2{
     /* border: 1px solid white; */
     margin-top: 30px;    
     margin-left: 0px;
-    width: 200px;
+    width: 10%;
     height: 100vh;    
 }
 
@@ -113,7 +138,7 @@ nav a{
     font-family: var(--font-title);
 }
 
-a:hover {
+nav a:hover {
     color:var(--hover);
     transform: scale(1.5);
     /* font-weight: bold; */
@@ -127,9 +152,9 @@ a:hover {
 #img-sky{
     background-color: black;
     height: 50px;
-    position: absolute;
+    /* position: relative;
     top: 165px;
-    margin-left: 5px;
+    margin-left: 5px; */
     border-radius: 5px;
 }
 
@@ -141,21 +166,21 @@ a:hover {
     font-family: var(--font-title);
     margin: 0 auto;
 }
-.flip-card a:hover {
+.flip-card-back a:hover {
     /* text-decoration: underline; */
     color: var(--hover);
     text-shadow: -2px 2px black;
-    transform: 1.2;
+    /* transform: 1.0; */
 }
 
 .flip-card {
     margin: 0px auto;
     background-color: transparent;
     width: 600px;
-    height: 350px;
+    height: 375px;
     /* border: 1px solid blue; */
     perspective: 2000px; /*3D effect */
- 
+    
 }
 
 /*Position front and back side of flip-card*/
@@ -170,7 +195,7 @@ a:hover {
 
 /*horizontal flip on mouse over flip-card container*/
 .flip-card:hover .flip-card-inner {
-   transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 /*Position front and back side*/
@@ -187,20 +212,47 @@ a:hover {
     background-color: white;
 }
 
-.flip-card-back {
+.flip-card-back{
     display: flex;
-    justify-content: center;
-    align-items:center;
+    flex-direction: column;
     background-color: white;
     color: black;
-    transform: rotateY(180deg);   
-   
+    transform: rotateY(180deg); 
 }
 
-form h1{
-    padding: 40px;
-    margin-top: -110px;
+#flip-card-back-main{
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    height: 80%;
+    gap: 45px;
 }
+
+.flip-card-back p{
+    width: 15vw;
+    margin-top: 10px;
+}
+
+#back-col-2{
+    height: 100%;
+}
+
+#back-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5%;
+    margin-top: -10px;
+}
+
+#back-footer a:hover{
+    transform: scale(1.1);
+}
+
+[id ^="back-footer-"]{
+    width: 5vw;
+}
+
 
 form{
     text-align: left;
@@ -210,9 +262,27 @@ form{
     /* justify-items: center; */
     background-color: white;   
     border-style: none;
-    width: 800px; 
+    width: 700px; 
     max-height: 800px;  
     padding-bottom: 20px;
+    
+}
+
+.form-header{
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-img{
+    background-image: url("../public/logo1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 100%;
+}
+form h1{
+    padding: 40px;
+    width: 300%
     
 }
 
@@ -238,7 +308,7 @@ input, textarea{
     border-style: hidden;
     background-color:aquamarine;
     font-weight: bold;
-    width: 70px;
+    width: 150px;
     box-shadow: 1px 1px 3px 2px whitesmoke;
     font-family: var(--font-title);
 }
@@ -250,7 +320,7 @@ input, textarea{
     background-color:aquamarine;
     font-weight: bold;
     height: 20px;
-    width: 15%;   
+    width: fit-content;   
     padding: 20px auto; 
     box-shadow: 1px 1px 3px 2px whitesmoke;
     font-family: var(--font-title);
@@ -284,4 +354,141 @@ li{
 
 #tutorials-container:last-child hr {
     display:none;
+}
+
+@media (min-width: 1300px){
+    .home-img{
+        height: 65vh;
+    }
+}
+
+
+@media (min-width: 800px){
+    #header{
+        display: none;
+    }
+    
+}
+
+@media (max-width: 1000px){
+
+    .email-form{
+        width: 630px;
+    }
+
+    
+}
+@media (max-width: 800px) {
+    #container-home{
+        display: flex;
+        flex-direction: column;
+    }
+    #container-home p{
+        width:50vw;
+        margin: auto;
+    }
+    .home-img{
+        height: 50vh;
+    }
+
+    .home-col-3{
+        width: 90%;
+    }
+
+    #Aside{
+        display: none;
+    }
+    #header nav{
+        /* margin-left: 0px; */
+        margin: 0px auto;
+       width: fit-content;
+    }
+
+    #header a{
+        border: none;
+        width: fit-content;
+        margin-left: 15px
+    }
+
+    #header a:hover {
+        transform: scale(1.2);
+    }
+
+    .email-form{
+        width: 80vw;
+        margin: 20px auto;
+    }
+
+    .email-form h1{
+        width: 80vw;
+        margin-top: 0px;
+    }
+
+    .form-img{
+
+    }
+
+    iframe{
+        width: 80vw;
+    }
+}
+
+@media (max-width: 650px){
+    
+    #header nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flip-card{
+        width: 325px;
+        height:65vh;
+    }
+
+    .flip-card-front {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+
+    }
+
+    #flip-card-back-main{
+        gap: 10px;
+    }
+
+    #flip-card-back-main p{
+        text-align: left;
+        width: 40vw;
+    }
+    #back-title{
+        text-align: left;
+        /* margin-left: -70px; */
+        font-size: 18px;
+        /* padding-bottom: 30px; */
+
+    }
+    
+   #img-sky{
+    margin: 0px auto;
+   }
+
+    [id ^="back-footer-"]{
+        width: 80px;
+    }
+
+    .form-header{
+       flex-direction: column;
+    }
+
+    .form-img{
+        background-position: center;
+        height: 15vh;
+    }
+
+    form h1{
+        font-size:x-large;
+    }
+
 }

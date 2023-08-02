@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Aside from './components/Aside';
 import Modal from './components/Modal';
+import Window from './components/Window';
 //import Routes, Route components from react-router-dom
 import { Routes, Route } from 'react-router-dom';
 //import pages
@@ -35,6 +36,7 @@ function App() {
     <div className="App">
       <div className="title"> <h1 className={isActive ? 'title-off': null}>ThatSombraCoder</h1> </div>
       <Header/> 
+      <Window/>
       <Aside turnOn={turnOn} turnOff={turnOff}/>     
         <Routes>
           <Route path="/" element={<Home />}/>

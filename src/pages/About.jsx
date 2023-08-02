@@ -30,30 +30,30 @@ export default function About(props) {
                         
                     </div>
                     <div className="flip-card-back">
-                        <img src={about.headshot} alt="headshot" style={{width: "85px", height:"300px", border: "2px solid black"}}/>
-                        <div style={{width: "50%"}}>
-                            <h2 className="highlight">ThatShadowCoder</h2> <br/>                           
-                            <p>
-                                <span style={{textDecoration: "underline", fontFamily: "Black Ops One"}}>Full Stack Engineer</span> 
-                            </p>
-                            <p style={{marginLeft: "-100px"}}>Lover of ...</p>                                                          
-                            <ul style={{margin: "0px auto", width:"fit-content"}}>
-                                <li>Life</li>
-                                <li>Learning</li>
-                                <li>Lambdas</li>
-                                <li>and All Things <img id="img-sky" src={"../sky-black.png"} onClick={props.toggleModal}/></li>
-                            </ul>                            
-                            <a 
-                                href="https://www.youtube.com/channel/UClXA3La1YE-vEODjPhdyiug" 
+                        <main id="flip-card-back-main">
+                            <img id="headshot" src={about.headshot} alt="headshot" style={{width: "85px", height:"300px", border: "2px solid black"}}/>
+                            <div id="back-col-2">
+                                <h2 id="back-title" className="highlight">ThatShadowCoder</h2> <br/>
+                                <p>
+                                    <span style={{textDecoration: "underline", fontFamily: "Black Ops One"}}>Full Stack Engineer</span>
+                                </p>
+                                <p >Lover of Life, Learning, Lambdas...</p>
+                                <p>...and All Things:</p>                                          
+                               <img id="img-sky" src={"../sky-black.png"} onClick={props.toggleModal}/>                            
+                            </div>
+                        </main>
+                        <footer id="back-footer">
+                            <Link to="/contact" onClick={props.turnOff} id="back-footer-contact">CONTACT</Link>
+                            <a
+                                href="https://www.youtube.com/channel/UClXA3La1YE-vEODjPhdyiug"
                                 target="_blank" rel="noopener noreferrer">
-                                <img 
-                                    src="./youtube.png" 
-                                    alt="YouTube-icon" 
-                                    style={{width:"75px"}}
+                                <img
+                                    src="./youtube.png"
+                                    alt="YouTube-icon"
+                                    id="back-footer-youtube"
                                 />
-                            </a> <br/>
-                            <Link to="/contact" onClick={props.turnOff} style={{marginTop: "2px"}}>CONTACT</Link>                            
-                        </div>
+                            </a>
+                        </footer>
                     </div>
                 </div>
             </div>

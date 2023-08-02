@@ -37,8 +37,10 @@ export default function Form ({UrlPost, URL}) {
     return(
         <div>
             <form className="email-form" onSubmit={handleSubmit}>
-                <img src="./logo1.png" alt="ThatSombraCoder" style={{width: "112px", height: "112px", position: "relative", left: "680px", marginTop: "10px"}}/>
-                <h1 style={{color: "black"}}>Contact <span className="highlight">ThatSombraCoder</span></h1>
+                <div className="form-header">
+                    <h1 style={{color: "black"}}>Contact <span className="highlight">ThatSombraCoder</span></h1>
+                    <h1 className="form-img"></h1>
+                </div>
                 <input type="text" name="name" placeholder="full name"  value={data.name} id="user-name" onChange={handleChange}/>
                 <input type="text" name="email" placeholder="email address" value={data.email} id="user-email" onChange={handleChange}/>
                 <input type="text" name="subject" placeholder="subject" value={data.subject} id="subject-email" onChange={handleChange}/>
