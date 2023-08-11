@@ -21,8 +21,8 @@ export default function Tutorials(props) {
             return(
 
                 <div id="tutorials-container" key={title}>
-                    <h1 style={{width:"70%", margin: "0px auto", whiteSpace: "pre-line"}}>{title}</h1>
-                    <YoutubeEmbed embedId = {id}/>
+                    <h3 style={{width:"70%", margin: "0px auto", whiteSpace: "pre-line"}}>{title}</h3>
+                    <YoutubeEmbed embedId = {id} frameSize={props.frameSize}/>
                     <hr style={{width: "773px", margin: "0px auto"}}/><br/> {/**873 */}
                 </div>
             )        

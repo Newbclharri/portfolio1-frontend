@@ -26,12 +26,11 @@ export default function About(props) {
             <div className="flip-card">
                 <div className="flip-card-inner">
                     <div className="flip-card-front"> 
-                        <img src="./logo1.png" alt="ThatSombraCoder" style={{width: "60%"}}/>                       
-                        
+                        <img src="./logo1.png" alt="ThatSombraCoder" style={{width: "60%"}}/>         
                     </div>
                     <div className="flip-card-back">
                         <main id="flip-card-back-main">
-                            <img id="headshot" src={about.headshot} alt="headshot" style={{width: "85px", height:"300px", border: "2px solid black"}}/>
+                            <div id="container-headshot"><img id="headshot" src={about.headshot} alt="headshot" style={{width: "85px", height:"300px", border: "2px solid black"}}/></div>
                             <div id="back-col-2">
                                 <h2 id="back-title" className="highlight">ThatShadowCoder</h2> <br/>
                                 <p>
