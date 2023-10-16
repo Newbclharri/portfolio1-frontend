@@ -41,7 +41,6 @@ body{
 
 .title {
     display: flex;
-    border: 2px solid rgba(0, 0, 0, 0.995);
     background-color: rgba(11, 11, 11, 0.754);
     justify-content: center; /*x-axis property*/
 }

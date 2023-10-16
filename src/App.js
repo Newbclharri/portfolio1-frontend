@@ -22,7 +22,6 @@ function App() {
   const UrlPost = "http://localhost:5000/contact";
   const size = 26;
   const [isActive, setActive] = useState(false);
-  const [modal, setModal] = useState(false);
   const[show, setShow] = useState(false);
   const [widthFrame, setWidthFrame] = useState("");
   const [heightFrame, setHeightFrame] = useState("");
@@ -55,9 +54,6 @@ function App() {
         icon: <FiMessageCircle size={size} />
       }
     ]);
-  const toggleModal = () => {
-    setModal((prev) => !prev)
-  }
 
   const toggleDropdown = ()=>{
     setShow((prev)=>!prev)
@@ -66,7 +62,6 @@ function App() {
   const turnOffDropdown = (e)=>{
     const classDiv = e.target.className;
     const docEle = document.documentElement;
-    const transparent = getComputedStyle(docEle).getPropertyValue("--mobile-menu-top-color");
     console.log( "top",classDiv, show)
     if(show){
       console.log("inside conditional")
@@ -127,7 +122,7 @@ function App() {
         <Aside turnOn={turnOn} turnOff={turnOff} />
         <Routes>
           <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About URL={URL} toggleModal={toggleModal} modal={modal} turnOff={turnOff} />} />
+          <Route path="/about" element={<About URL={URL}  turnOff={turnOff} />} />
           <Route path="/projects" element={<Projects URL={URL} frameSize={{width: widthDiv, height: heightDiv}} windowWidth={windowWidth}/>} />
           <Route path="/tutorials" element={<Tutorials URL={URL} frameSize={{ width: String(widthDiv), height: String(heightDiv)}} />} />
           <Route path="/contact" element={<Contact UrlPost={UrlPost} URL={URL} />} />

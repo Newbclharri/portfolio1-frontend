@@ -5,6 +5,7 @@ import Modal from "../components/Modal";
 export default function About(props) {
     //create state variable to hold about data
     const [about, setAbout] = useState(null);
+    const [isActiveModal, setIsActiveModal] = useState(false);
     //create function to make api call
     const getAboutData = async () => {
         //make api call and get response
@@ -14,6 +15,9 @@ export default function About(props) {
         //set the about state to the data
         setAbout(data);
     };
+    const toggleModal = ()=>{
+        setIsActiveModal((prev)=>!prev)
+    }
 
     //make an initial call for the data inside a useEFfect, so it only happens once on component load
     useEffect(() => {getAboutData()}, []);
@@ -38,7 +42,7 @@ export default function About(props) {
                                 </p>
                                 <p >Lover of Life, Learning, Lambdas...</p>
                                 <p>...and All Things:</p>                                          
-                               <img id="img-sky" src={"../sky-black.png"} onClick={props.toggleModal}/>                            
+                               <img id="img-sky" src={"../sky-black.png"} onClick={toggleModal}/>                            
                             </div>
                         </main>
                         <footer id="back-footer">
@@ -56,7 +60,7 @@ export default function About(props) {
                     </div>
                 </div>
             </div>
-            <Modal modal={props.modal} toggleModal={props.toggleModal}/>
+            <Modal isActiveModal={isActiveModal} toggleModal={toggleModal}/>
         </div>
     );
 

@@ -1,12 +1,9 @@
-import {React, useState} from "react";
+import {React, useEffect, useState} from "react";
 import "../App.css";
 
-const Modal = ({modal, toggleModal})=> {
-    // const [modal, setModal] = useState(false);
-    // const toggleModal = ()=>{
-    //     setModal((prev)=>!prev) //callback function behaves sychronously so that modal is updated as expected
-    // }
-
+const Modal = ({isActiveModal, toggleModal})=> {
+    const [modal, setModal] = useState(isActiveModal);
+    
     const styleModalTitle = {
         boxShadow: "2px -2px rgba(255,255,255, 0.5)",
         borderRadius: "10px",
@@ -19,7 +16,11 @@ const Modal = ({modal, toggleModal})=> {
         borderRadius: "5px",
         backgroundColor: "rgba(255,255,255, 0.7)",
         marginRight: "5px"
-    }
+    }   
+
+    useEffect(()=>{
+        return setModal(isActiveModal)
+    },[isActiveModal])
 
     return(
         <div>
@@ -48,7 +49,7 @@ const Modal = ({modal, toggleModal})=> {
                     />
                     
                 </div>
-                )}  
+                )}
         </div>
     )
 }

@@ -22,7 +22,7 @@ export default function Projects(props) {
 
     const loaded = () =>{
         //if data received render with JSX
-        return projects.map(({name, live, repo, image}) =>{
+        return projects.map(({name, live, deployment, repo, repoName, image}) =>{
             const styleBgImg = {
                 margin: "0 auto",
                 width: width + (windowWidth > 650 ? "vw": "px"),
@@ -37,8 +37,8 @@ export default function Projects(props) {
                 <div id="projects-container" key={name}>
                     <div className="projects" >
                         <h2>{name}</h2>
-                        <h3>Live Deployment: <a href={live} target="_blank" rel="noreferrer" id="project-links"><button className="button-main">Render</button></a></h3>
-                        <h3>Code: <a href={repo} target="_blank" rel="noreferrer"><button className="button-main">Repo</button></a></h3> <br/>
+                        <h3>Live Deployment: <a href={live} target="_blank" rel="noreferrer" id="project-links"><button className="button-main">{deployment}</button></a></h3>
+                        <h3>Code: <a href={repo} target="_blank" rel="noreferrer"><button className="button-main">{repoName}</button></a></h3> <br/>
                         <h3>Screenshot:</h3> 
                         <div className="screenshot"
                             style={styleBgImg}
