@@ -42,7 +42,7 @@ export default function Projects(props) {
                         <h3>Screenshot:</h3> 
                         <div className="screenshot"
                             style={styleBgImg}
-                            ></div>
+                        ></div>
                     </div>
                     <hr style={{width: widthHr + (windowWidth > 650 ? "vw": "px"), margin: "0px auto"}}/>
                     <br/>
