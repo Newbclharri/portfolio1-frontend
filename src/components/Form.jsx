@@ -17,7 +17,7 @@ export default function Form ({UrlPost, URL}) {
         console.log(URL+"contact"); //add NodemailerUser server code to production server site @ render.com and user URL in APP.js
         try{
             await fetch(URL + "contact", {
-                method: "post9",
+                method: "post", //"post9" previously. This may have been the cause of the error
                 headers: {
                     Accept: "application/json",
                     "Content-Type": "application/json"
