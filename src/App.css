@@ -105,7 +105,6 @@ body{
     width: 100%;
 }
 
-
 .highlight {
     color: maroon;
 }
@@ -131,6 +130,10 @@ header, h1, h2,h3{
     margin-left: 0px;
     width: 10%;
     height: 100vh;    
+}
+
+a{
+    cursor: pointer;
 }
 
 .Aside nav{
@@ -489,7 +492,10 @@ li{
         background-color: rgba(255,255,255, 0.5); 
         border-style: none;
     }
-    
+
+    .flip-card{
+        height: 62vh;
+    }    
 
     #back-col-2 p{
         width: 40vw;
