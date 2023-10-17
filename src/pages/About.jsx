@@ -46,16 +46,20 @@ export default function About(props) {
                             </div>
                         </main>
                         <footer id="back-footer">
-                            <Link to="/contact" onClick={props.turnOff} id="back-footer-contact">CONTACT</Link>
-                            <a
-                                href="https://www.youtube.com/channel/UClXA3La1YE-vEODjPhdyiug"
-                                target="_blank" rel="noopener noreferrer">
-                                <img
-                                    src="./youtube.png"
-                                    alt="YouTube-icon"
-                                    id="back-footer-youtube"
-                                />
-                            </a>
+                            <div className="footer-col-1">
+                                <Link to="/contact" onClick={props.turnOff} id="back-footer-contact">CONTACT</Link>
+                            </div>
+                            <div className="footer-col-2">
+                                <a
+                                    href="https://www.youtube.com/channel/UClXA3La1YE-vEODjPhdyiug"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <img
+                                        src="./youtube.png"
+                                        alt="YouTube-icon"
+                                        id="back-footer-youtube"
+                                    />
+                                </a>
+                            </div>
                         </footer>
                     </div>
                 </div>

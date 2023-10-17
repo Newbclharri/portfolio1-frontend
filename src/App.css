@@ -7,6 +7,17 @@
     /* border: solid red; */
 }
 
+/*TESTING-BUSINESS CARD*/
+/* #back-footer, #back-footer a{
+    border: 3px solid blue;
+} */
+
+
+
+
+
+/*TESTING-BUSINESS CARD*/
+
 
 :root {
     --hover: greenyellow;
@@ -206,6 +217,8 @@ nav a:hover {
     border-radius: 5px;
 }
 
+/*BUSINESS CARD*/
+
 .flip-card a{
     display: flex;
     width: fit-content;
@@ -287,11 +300,13 @@ nav a:hover {
     justify-content: center;
 }
 
+
 #back-footer{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 5%;
+    gap: 33%;
     margin-top: -10px;
 }
 
@@ -407,6 +422,8 @@ li{
     display:none;
 }
 
+/*MEDIA QUERIES*/
+
 @media (min-width: 1200px){
 
     .home-img{
@@ -494,11 +511,15 @@ li{
     }
 
     .flip-card{
-        height: 62vh;
+        height: 365px;
     }    
 
     #back-col-2 p{
         width: 40vw;
+    }
+    #back-footer{
+        margin-top: -8px;
+        gap: 34vw;
     }
     .email-form{
         width: 80vw;
@@ -534,7 +555,7 @@ li{
     }
     .flip-card{
         width: 325px;
-        height:65vh;
+        height:375px;
     }
 
     .flip-card-front {
@@ -578,8 +599,12 @@ li{
     margin: 0px auto;
    }
 
-    [id ^="back-footer-"]{
+   [id ^="back-footer-"]{
         width: 80px;
+    }
+
+    #back-footer{
+        gap: 18vw;
     }
 
     .form-header{
