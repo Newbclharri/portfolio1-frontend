@@ -4,19 +4,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: solid red; */
+    /* border: solid blue; */
 }
-
-/*TESTING-BUSINESS CARD*/
-/* #back-footer, #back-footer a{
-    border: 3px solid blue;
-} */
-
-
-
-
-
-/*TESTING-BUSINESS CARD*/
 
 
 :root {
@@ -444,10 +433,9 @@ li{
 
     .email-form{
         width: 630px;
-    }
-
-    
+    }    
 }
+
 @media (max-width: 870px) { 
     *{
         /* font-size: large; */
