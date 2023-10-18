@@ -17,7 +17,7 @@ export default function DropdownItem ({navList, turnOff, turnOn, toggleDropdown,
             <Link 
                 className="dropdown-link"
                 key={item.title} 
-                to={`/${item.lower}`} 
+                to={`/${item.lower()}`} 
                 onClick={handleClick}>
                 <div 
                     style={{display: "flex", alignItems:"center", gap: "30px"}}>

@@ -30,27 +30,37 @@ function App() {
     ([
       {
         title: "HOME",
-        lower: "home",
+        lower(){
+          return this.title.toLowerCase();
+        },
         icon: <FiHome size={size} />
       },
       {
         title: "ABOUT",
-        lower: "about",
+        lower(){
+          return this.title.toLowerCase();
+        },
         icon: <FiUserCheck size={size} />
       },
       {
         title: "PROJECTS",
-        lower: "projects",
+        lower(){
+          return this.title.toLowerCase();
+        },
         icon: <FiTrello size={size} />
       },
       {
         title: "TUTORIALS",
-        lower: "tutorials",
+        lower(){
+          return this.title.toLowerCase();
+        },
         icon: <FiYoutube size={size} />
       },
       {
         title: "CONTACT",
-        lower: "contact",
+        lower(){
+          return this.title.toLowerCase();
+        },
         icon: <FiMessageCircle size={size} />
       }
     ]);
