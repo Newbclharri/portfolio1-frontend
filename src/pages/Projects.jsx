@@ -25,7 +25,7 @@ export default function Projects(props) {
         return projects.map(({name, live, deployment, repo, repoName, image}) =>{
             const styleBgImg = {
                 margin: "0 auto",
-                width: width + (windowWidth > 650 ? "vw": "px"),
+                width: width + (windowWidth > 580 ? "vw": "px"),
                 height: height + "px",
                 backgroundImage: `url(${image})`,
                 backgroundRepeat: "no-repeat",
@@ -44,7 +44,7 @@ export default function Projects(props) {
                             style={styleBgImg}
                         ></div>
                     </div>
-                    <hr style={{width: widthHr + (windowWidth > 650 ? "vw": "px"), margin: "0px auto"}}/>
+                    <hr style={{width: widthHr + (windowWidth > 570 ? "vw": "px"), margin: "0px auto"}}/>
                     <br/>
                 </div>
                 
