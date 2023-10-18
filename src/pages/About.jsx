@@ -26,7 +26,7 @@ export default function About(props) {
     const loaded = () => (
         <div>
             <br/>
-            <h3 id="business-card">*Business Card*</h3>
+            <h3 id="business-card">{props.busCardTitle}</h3>
             <div className="flip-card">
                 <div className="flip-card-inner">
                     <div className="flip-card-front"> 
