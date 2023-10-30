@@ -31,7 +31,7 @@ function App() {
       {
         title: "",
         lower(){
-          return this.title.toLowerCase();
+          return this.title ? this.title.toLowerCase(): "";
         },
         icon: <FiHome size={size} />
       },
