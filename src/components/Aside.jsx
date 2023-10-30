@@ -8,7 +8,7 @@ const Aside = ({turnOn,turnOff, setActive})=> {
         <div className="Aside">
             <div>
                 <nav id="aside-container">
-                    <Link to="/home" onClick={turnOn}>HOME</Link>
+                    <Link to="/" onClick={turnOn}>HOME</Link>
                     <Link to="/about" onClick={turnOn}>ABOUT</Link>
                     <Link to="/projects" onClick={turnOn}>PROJECTS</Link>
                     <Link to="/tutorials" onClick={turnOn}>TUTORIALS</Link>
