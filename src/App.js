@@ -29,7 +29,7 @@ function App() {
   const [navList, setNavList] = useState
     ([
       {
-        title: "HOME",
+        title: "",
         lower(){
           return this.title.toLowerCase();
         },
