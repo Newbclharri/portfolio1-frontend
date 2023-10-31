@@ -28,6 +28,11 @@ body{
     color: white;
 }
 
+footer{
+    font-family: var(--font-title);
+    font-size:smaller;
+}
+
 ::placeholder{
     /* background-color: transparent; */
     font-family: var(--font-main);    
