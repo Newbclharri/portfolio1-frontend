@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import Aside from './components/Aside';
 // import Window from './components/Window';
 //import Routes, Route components from react-router-dom
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate} from 'react-router-dom';
 //import pages
 import Home from './pages/Home';
 import About from './pages/About';
@@ -136,7 +136,7 @@ function App() {
           <Route path="/projects" element={<Projects URL={URL} frameSize={{width: String(widthDiv), height: String(heightDiv)}} windowWidth={windowWidth}/>} />
           <Route path="/tutorials" element={<Tutorials URL={URL} frameSize={{ width: String(widthDiv), height: String(heightDiv)}} />} />
           <Route path="/contact" element={<Contact UrlPost={UrlPost} URL={URL} />} />
-          <Route element={<Home />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer />
       </div>
