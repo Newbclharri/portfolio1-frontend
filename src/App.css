@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: solid blue; */
+    border: solid blue; 
 }
 
 
@@ -529,7 +529,7 @@ li{
     }
 
     .screenshot{
-        width: 500px;
+        /* width: 50%; */
     }
 }
 

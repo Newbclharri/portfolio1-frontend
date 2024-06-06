@@ -133,9 +133,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About URL={URL}  turnOff={turnOff} busCardTitle={useWindowWidth() < 581 ? "Tap Me!":"Business Card"}/>} />
-          <Route path="/projects" element={<Projects URL={URL} frameSize={{width: widthDiv, height: heightDiv}} windowWidth={windowWidth}/>} />
+          <Route path="/projects" element={<Projects URL={URL} frameSize={{width: String(widthDiv), height: String(heightDiv)}} windowWidth={windowWidth}/>} />
           <Route path="/tutorials" element={<Tutorials URL={URL} frameSize={{ width: String(widthDiv), height: String(heightDiv)}} />} />
           <Route path="/contact" element={<Contact UrlPost={UrlPost} URL={URL} />} />
+          <Route element={<Home />} />
         </Routes>
         <Footer />
       </div>
