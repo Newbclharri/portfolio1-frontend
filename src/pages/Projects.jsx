@@ -48,7 +48,7 @@ export default function Projects(props) {
                         <h2>Project {index + 1}: {name}</h2>
                         <h3>Live Deployment: <a href={live} target="_blank" rel="noreferrer" id="project-links"><button className="button-main">{deployment}</button></a></h3>
                         <h3>Code: <a href={repo} target="_blank" rel="noreferrer"><button className="button-main">{repoName}</button></a></h3> <br/>
-                        <h3>{video ? "Video" : "Screenshot"}:</h3> 
+                        <h3>{video ? "Demo" : "Screenshot"}:</h3> 
                         {video && (
                             <YoutubeEmbed embedId = {video.embedId} frameSize = {props.frameSize}/>
                         )}
@@ -58,7 +58,12 @@ export default function Projects(props) {
                           ></div>
                         )}                      
                     </div>
-                    <hr style={{width: widthHr + (windowWidth > 570 ? "vw": "px"), margin: "0px auto"}}/>
+                    
+                    {/* Remove the last <hr> separator */}
+                    {index !== projects.length - 1 && (
+                        <hr className="separator" style={{width: widthHr + (windowWidth > 570 ? "vw": "px"), margin: "0px auto"}}/>
+
+                    )}
                     <br/>
                 </div>
                 

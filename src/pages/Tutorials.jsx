@@ -17,13 +17,18 @@ export default function Tutorials(props) {
 
     const loaded = ()=>{
         //if data received, render with JSX
-        return tutorials.map(({title, url, id})=>{
+        return tutorials.map(({title, url, id}, index)=>{
             return(
 
                 <div id="tutorials-container" key={title}>
                     <h3 style={{width:"70%", margin: "0px auto", whiteSpace: "pre-line"}}>{title}</h3>
                     <YoutubeEmbed embedId = {id} frameSize={props.frameSize}/>
-                    <hr style={{width: "773px", margin: "0px auto"}}/><br/> {/**873 */}
+                    
+                    {/* Remove the last <hr> separator */}
+                    {index !== tutorials.length - 1 && (
+                        <hr style={{width: "773px", margin: "0px auto"}} />
+                    )}
+                    <br/> {/**873 */}
                 </div>
             )        
         })       
