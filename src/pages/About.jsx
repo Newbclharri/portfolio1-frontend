@@ -19,6 +19,22 @@ export default function About(props) {
         setIsActiveModal((prev)=>!prev)
     }
 
+    const aboutStyle = {
+        textAlign: "left",
+        // width: "30%",
+        margin: "0 auto",
+        justifyContent: "justify",
+    }
+
+    const linkStyle = {
+        fontWeight: "bold",
+        backgroundColor: "#3366ff",
+        color: "white",
+        textDecoration: "none",
+        paddingLeft: "2px",
+        border: "1px solid gray",
+        borderRadius: "2px"
+    }
     //make an initial call for the data inside a useEFfect, so it only happens once on component load
     useEffect(() => {getAboutData()}, []);
 
@@ -63,6 +79,22 @@ export default function About(props) {
                         </footer>
                     </div>
                 </div>
+            </div>
+            <br />
+            <div className="bio" style = {aboutStyle}>
+                <h3>About Me:</h3>
+                <br />
+                <p style={{textIndent: "2em"}}>{about.bio}&nbsp;
+                Discover more at&nbsp;
+                <a className="linkedin" href="https://www.linkedin.com/in/calvin-harris-jr/" 
+                style ={linkStyle}
+                target="_blank" 
+                rel="noreferrer">
+                    <span id="linked">Linked</span>&nbsp;<span id="in">in</span>
+                </a>
+                .
+                </p>
+               
             </div>
             <Modal isActiveModal={isActiveModal} toggleModal={toggleModal}/>
         </div>

@@ -31,7 +31,17 @@ body{
 a {
     cursor: pointer;
 }
-
+#linked{
+    color:whitesmoke;
+    font-weight: bolder;
+}
+#in{
+    color:#3366ff;
+    background-color: white;
+    font-weight: bolder;
+    padding: 0px 2px;
+    border-radius: 2px;
+}
 footer{
     font-family: var(--font-title);
     font-size:smaller;
@@ -410,14 +420,6 @@ li{
 }
 
 
-#projects-container:last-child hr {
-    display:none;
-}
-
-#tutorials-container:last-child hr {
-    display:none;
-}
-
 /*MEDIA QUERIES*/
 
 @media (min-width: 1200px){
@@ -426,12 +428,17 @@ li{
         height: 65vh;
         background-position: top;
     }
+   
 }
 
 
 @media (min-width: 870px){
     #header{
         display: none;
+    }
+
+    .bio{
+        width: 605px;
     }
     
 }
@@ -446,6 +453,9 @@ li{
 @media (max-width: 870px) { 
     *{
         /* font-size: large; */
+    }
+    .bio{
+        width: 605px;
     }  
     .container-home{
         display: flex;
@@ -536,7 +546,9 @@ li{
 }
 
 @media (max-width: 580px){
-
+    .bio{
+        width: 90%;
+    }
     nav a{
         font-size: large;
     }
