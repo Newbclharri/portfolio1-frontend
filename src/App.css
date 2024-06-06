@@ -28,6 +28,10 @@ body{
     color: white;
 }
 
+a {
+    cursor: pointer;
+}
+
 footer{
     font-family: var(--font-title);
     font-size:smaller;
@@ -137,9 +141,6 @@ header, h1, h2,h3{
     height: 100vh;    
 }
 
-a{
-    cursor: pointer;
-}
 
 .Aside nav{
     display: flex;
@@ -370,6 +371,7 @@ input, textarea{
     width: 150px;
     box-shadow: 1px 1px 3px 2px whitesmoke;
     font-family: var(--font-title);
+    cursor: pointer;
 }
 
 #business-card {
