@@ -45,7 +45,7 @@ export default function Projects(props) {
             return(
                 <div id="projects-container" key={name}>
                     <div className="projects" >
-                        <h2>Project {index + 1} {name}</h2>
+                        <h2>Project: {index + 1} {name}</h2>
                         <h3>Live Deployment: <a href={live} target="_blank" rel="noreferrer" id="project-links"><button className="button-main">{deployment}</button></a></h3>
                         <h3>Code: <a href={repo} target="_blank" rel="noreferrer"><button className="button-main">{repoName}</button></a></h3> <br/>
                         <h3>{video ? "Video" : "Screenshot"}:</h3> 

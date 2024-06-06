@@ -5,7 +5,7 @@ export default function Footer() {
         <footer>
             <br/>
             <br/>
-            <p>&copy; 2023 ThatSombraCoder All rights reserved</p>
+            <p>&copy; 2024 ThatSombraCoder All rights reserved</p>
         </footer>
     );
 }
