@@ -1,11 +1,12 @@
 
 
 export default function Footer() {
+    const year = new Date().getFullYear();
     return(
         <footer>
             <br/>
             <br/>
-            <p>&copy; 2024 ThatSombraCoder All rights reserved</p>
+            <p>&copy; {year} ThatSombraCoder All rights reserved</p>
         </footer>
     );
 }
