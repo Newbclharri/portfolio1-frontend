@@ -23,7 +23,7 @@ export default function About(props) {
         textAlign: "left",
         // width: "30%",
         margin: "0 auto",
-        justifyContent: "justify",
+        textAlign: "justify",
     }
 
     const linkStyle = {
