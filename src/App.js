@@ -8,12 +8,18 @@ import Aside from './components/Aside';
 // import Window from './components/Window';
 //import Routes, Route components from react-router-dom
 import { Routes, Route, Navigate} from 'react-router-dom';
+import {Suspense, lazy} from 'react';
 //import pages
 import Home from './pages/Home';
-import About from './pages/About';
-import Projects from './pages/Projects';
-import Tutorials from './pages/Tutorials';
 import Contact from './pages/Contact';
+// import About from './pages/About';
+// import Projects from './pages/Projects';
+// import Tutorials from './pages/Tutorials';
+const About = lazy(()=> import('./pages/About'));
+const Projects = lazy(()=> import('./pages/Projects'));
+const Tutorials = lazy(()=> import('./pages/Tutorials'));
+
+
 
 
 function App() {
@@ -130,14 +136,16 @@ function App() {
       <div className="App-align">
         <ShowWindowWidth />
         <Aside turnOn={turnOn} turnOff={turnOff} />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About URL={URL}  turnOff={turnOff} busCardTitle={useWindowWidth() < 581 ? "Tap Me!":"Business Card"}/>} />
-          <Route path="/projects" element={<Projects URL={URL} frameSize={{width: String(widthDiv), height: String(heightDiv)}} windowWidth={windowWidth}/>} />
-          <Route path="/tutorials" element={<Tutorials URL={URL} frameSize={{ width: String(widthDiv), height: String(heightDiv)}} />} />
-          <Route path="/contact" element={<Contact UrlPost={UrlPost} URL={URL} />} />
-          <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
+        <Suspense fallback ={<div>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About URL={URL}  turnOff={turnOff} busCardTitle={useWindowWidth() < 581 ? "Tap Me!":"Business Card"}/>} />
+            <Route path="/projects" element={<Projects URL={URL} frameSize={{width: String(widthDiv), height: String(heightDiv)}} windowWidth={windowWidth}/>} />
+            <Route path="/tutorials" element={<Tutorials URL={URL} frameSize={{ width: String(widthDiv), height: String(heightDiv)}} />} />
+            <Route path="/contact" element={<Contact UrlPost={UrlPost} URL={URL} />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+        </Suspense>
         <Footer />
       </div>
     </div>
