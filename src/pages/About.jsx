@@ -100,6 +100,46 @@ export default function About(props) {
         </div>
     );
 
-    //if data arrives return the result of loaded, if not, an h1 that says loading
-    return about ? loaded() : <h1>Loading...</h1>;
+    //define a function that returns a skeleton loader while data is fetching
+    const loading = () => (
+        <div>
+            <br/>
+            <h3 id="business-card" className="skeleton-button" style={{height: "20px", width: "150px"}}>&nbsp;</h3>
+            <div className="flip-card">
+                <div className="flip-card-inner">
+                    <div className="flip-card-front skeleton-card"> 
+                        <div className="skeleton-image" style={{width: "60%", height: "200px", margin: "80px auto"}}></div>         
+                    </div>
+                    <div className="flip-card-back skeleton-card">
+                        <main id="flip-card-back-main">
+                            <div id="container-headshot">
+                                <div className="skeleton-image" style={{width: "85px", height:"300px"}}></div>
+                            </div>
+                            <div id="back-col-2">
+                                <div className="skeleton-text skeleton-text-medium" style={{height: "24px", marginTop: "20px"}}></div>
+                                <div className="skeleton-text skeleton-text-long" style={{marginTop: "20px"}}></div>
+                                <div className="skeleton-text skeleton-text-short"></div>
+                                <div className="skeleton-text skeleton-text-short"></div>
+                                <div className="skeleton-image" style={{width: "90px", height: "50px", marginTop: "15px"}}></div>                            
+                            </div>
+                        </main>
+                        <footer id="back-footer">
+                            <div className="skeleton-button" style={{width: "90px"}}></div>
+                            <div className="skeleton-image" style={{width: "90px", height: "20px"}}></div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div className="bio" style = {aboutStyle}>
+                <div className="skeleton-text" style={{width: "150px", height: "20px", marginBottom: "20px"}}></div>
+                <div className="skeleton-text skeleton-text-long"></div>
+                <div className="skeleton-text skeleton-text-long"></div>
+                <div className="skeleton-text skeleton-text-medium"></div>
+            </div>
+        </div>
+    );
+
+    //if data arrives return the result of loaded, if not, show loading skeleton
+    return about ? loaded() : loading();
 }
