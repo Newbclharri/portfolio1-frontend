@@ -48,7 +48,7 @@ export default function Tutorials(props) {
                 {[1, 2, 3].map((item) => (
                     <div id="tutorials-container" key={item}>
                         <div className="skeleton-text" style={{ width: "30%", height: "20px", margin: "0px auto" }}></div>
-                        <div className="skeleton-image" style={{ width: "40%", height: "400px", margin: "20px auto" }}>
+                        <div className="skeleton-image" style={{ width: "700px", height: "450px", margin: "20px auto" }}>
                             <div className="skeleton-vid-info">
                                 <div className="skeleton-text skeleton-text-short"></div>
                                 <div className="skeleton-text skeleton-text-short"></div>
