@@ -458,6 +458,10 @@ li{
     width: 100%;
 }
 
+.skeleton-vid-info {
+    padding-top: 100px;
+}
+
 .skeleton-button {
     height: 20px;
     width: 100px;
